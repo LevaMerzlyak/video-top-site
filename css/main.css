@@ -1,0 +1,116 @@
+body {
+  font-family: sans-serif; }
+
+header {
+  -webkit-box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+  padding-right: 3%;
+  padding-left: 3%; }
+
+.logo {
+  display: inline-block; }
+
+.logo__link {
+  min-height: 44px;
+  min-width: 44px; }
+
+.nav__wrap {
+  display: inline-block;
+  float: right; }
+
+.nav {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.nav__item {
+  display: inline-block; }
+
+.nav__link {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #a8a8a8; }
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto; }
+
+.main__bg {
+  -webkit-box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+  background-image: url("../images/new-york-city-2.jpg");
+  background-size: cover;
+  padding: 20% 10%; }
+
+.main__head {
+  color: #fff; }
+
+.playBtn {
+  color: #fff;
+  text-decoration: none; }
+  .playBtn:hover .playBtn__txt {
+    opacity: 1; }
+
+.playBtn__txt {
+  opacity: 0.7;
+  display: inline-block;
+  padding-left: 30px; }
+
+.play__btn {
+  position: relative;
+  display: inline-block;
+  width: 1px;
+  height: 1px;
+  top: -5px;
+  left: 6px; }
+  .play__btn:before {
+    position: absolute;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    content: '';
+    z-index: 2;
+    border-left: 7.5px solid #f2f2f2;
+    border-bottom: 5px solid transparent;
+    border-top: 5px solid transparent; }
+  .play__btn:after {
+    content: '';
+    position: absolute;
+    opacity: 0.7;
+    border-radius: 100%;
+    border: 2px solid #f2f2f2;
+    width: 2px;
+    height: 2px;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-animation: pulse 4s cubic-bezier(0.075, 0.82, 0.165, 1) infinite;
+    animation: pulse 4s cubic-bezier(0.075, 0.82, 0.165, 1) infinite; }
+
+@-webkit-keyframes pulse {
+  0% {
+    width: inherit;
+    height: inherit; }
+  40% {
+    opacity: 0;
+    width: 60px;
+    height: 60px; }
+  100% {
+    opacity: 0;
+    width: 60px;
+    height: 60px; } }
+
+@keyframes pulse {
+  0% {
+    width: inherit;
+    height: inherit; }
+  40% {
+    opacity: 0;
+    width: 60px;
+    height: 60px; }
+  100% {
+    opacity: 0;
+    width: 60px;
+    height: 60px; } }
