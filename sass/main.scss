@@ -1,3 +1,114 @@
+@import "mixins";
+@mixin padding-hor($pad:auto) {
+	padding-right: $pad;
+	padding-left: $pad;
+}
+@mixin padding-ver($pad:0) {
+	padding-right: $pad;
+	padding-left: $pad;
+}
+@mixin boxShadow() {
+	box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+
 body {
-	font-family: sans-serif;
+  font-family: sans-serif; }
+
+header {
+  @include boxShadow;
+  @include padding-hor(3%);
+  height: 10vh;
+}
+.logo {
+	display: inline-block;
+}
+.logo__link {
+	min-height: 44px;
+	min-width: 44px;
+}
+.nav__wrap {
+	display: inline-block;
+	float: right;
+}
+.nav{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.nav__item{
+	display: inline-block;
+}
+.nav__link {
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #a8a8a8;
+}
+.container {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+.main__bg {
+	@include boxShadow;
+	background-image: url("../images/new-york-city-2.jpg");
+	background-size: cover;
+	padding: 20% 10%;
+	height: 90vh;
+}
+.main__head {
+	color: #fff;
+}
+.playBtn {
+	color: #fff;
+	text-decoration: none;
+	&:hover {
+		.playBtn__txt {
+			opacity: 1;
+		}
+	}
+}
+.playBtn__txt {	
+	opacity: 0.7;
+	display: inline-block;
+	padding-left: 35px;
+}
+.play__btn {
+	position: relative;
+	display: inline-block;
+	width: 1px;
+  	height: 1px;
+  	top: -5px;
+  	left: 6px;
+	&:before {
+		position: absolute;		
+		transform: translate(-50%,-50%);
+		@include triangle(right,#f2f2f2,5px);
+	}
+	&:after {
+		content: '';
+		position: absolute;
+		opacity: 0.7;
+		border-radius: 100%;		
+ 		border: 2px solid #f2f2f2;
+		width: 2px;
+		height: 2px;
+		transform: translate(-50%,-50%);
+		animation: pulse 4s cubic-bezier(0.075, 0.820, 0.165, 1.000) infinite;
+	}
+}
+@keyframes pulse {
+  0% {
+    width: inherit;
+    height: inherit;
+  }
+  40% {
+    opacity: 0;
+    width: 60px;
+    height: 60px;
+  }
+  100% {
+    opacity: 0;
+    width: 60px;
+    height: 60px;
+  }
 }
