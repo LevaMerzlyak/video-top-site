@@ -1,7 +1,6 @@
 body {
   font-family: sans-serif; }
 
-
 header {
   -webkit-box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
@@ -37,13 +36,19 @@ header {
   max-width: 1000px;
   margin: 0 auto; }
 
+main {
+  height: 30vh;
+  position: relative; }
+
 .main__bg {
   -webkit-box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
   background-image: url("../images/new-york-city-2.jpg");
   background-size: cover;
+  background-position: center center;
   padding: 20% 10%;
-  height: 90vh; }
+  height: 100%;
+  display: none; }
 
 .main__head {
   color: #fff; }
@@ -75,9 +80,9 @@ header {
     height: 0;
     content: '';
     z-index: 2;
-    border-left: 7.5px solid #f2f2f2;
-    border-bottom: 5px solid transparent;
-    border-top: 5px solid transparent; }
+    border-left: 9px solid #f2f2f2;
+    border-bottom: 6px solid transparent;
+    border-top: 6px solid transparent; }
   .play__btn:after {
     content: '';
     position: absolute;
@@ -89,8 +94,8 @@ header {
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    -webkit-animation: pulse 4s cubic-bezier(0.075, 0.82, 0.165, 1) infinite;
-    animation: pulse 4s cubic-bezier(0.075, 0.82, 0.165, 1) infinite; }
+    -webkit-animation: pulse 2.5s cubic-bezier(0.075, 0.82, 0.165, 1) infinite;
+    animation: pulse 2.5s cubic-bezier(0.075, 0.82, 0.165, 1) infinite; }
 
 @-webkit-keyframes pulse {
   0% {
@@ -118,3 +123,20 @@ header {
     width: 60px;
     height: 60px; } }
 
+.main__video {
+  position: absolute;
+  overflow: hidden;
+  left: 0;
+  top: 0; }
+
+.bg__video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  height: auto;
+  min-width: 100%;
+  min-height: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }

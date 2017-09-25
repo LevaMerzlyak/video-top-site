@@ -48,12 +48,18 @@ header {
 	max-width: 1000px;
 	margin: 0 auto;
 }
+main {
+	height: 30vh;
+	position: relative;
+}
 .main__bg {
 	@include boxShadow;
 	background-image: url("../images/new-york-city-2.jpg");
 	background-size: cover;
+	background-position: center center;
 	padding: 20% 10%;
-	height: 90vh;
+	height: 100%;
+	display: none;
 }
 .main__head {
 	color: #fff;
@@ -82,7 +88,7 @@ header {
 	&:before {
 		position: absolute;		
 		transform: translate(-50%,-50%);
-		@include triangle(right,#f2f2f2,5px);
+		@include triangle(right,#f2f2f2,6px);
 	}
 	&:after {
 		content: '';
@@ -93,7 +99,7 @@ header {
 		width: 2px;
 		height: 2px;
 		transform: translate(-50%,-50%);
-		animation: pulse 4s cubic-bezier(0.075, 0.820, 0.165, 1.000) infinite;
+		animation: pulse 2.5s cubic-bezier(0.075, 0.820, 0.165, 1.000) infinite;
 	}
 }
 @keyframes pulse {
@@ -111,4 +117,21 @@ header {
     width: 60px;
     height: 60px;
   }
+}
+.main__video {
+	position: absolute;
+	overflow: hidden;
+	
+	left: 0;
+	top: 0;
+}
+.bg__video {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: auto;
+	height: auto;
+	min-width: 100%;
+	min-height: 100%;
+	transform: translate(-50%,-50%);
 }
