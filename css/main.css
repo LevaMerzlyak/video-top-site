@@ -47,8 +47,7 @@ main {
   background-size: cover;
   background-position: center center;
   padding: 20% 10%;
-  height: 100%;
-  display: none; }
+  height: 100%; }
 
 .main__head {
   color: #fff; }
