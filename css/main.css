@@ -66,9 +66,9 @@ main {
   width: 100%;
   position: absolute;
   clip: rect(0, 100vw, 100vh, 0);
-  -webkit-transition: clip 1s cubic-bezier(0.99, 0.01, 0.45, 0.9) 1s;
-  -o-transition: clip 1s cubic-bezier(0.99, 0.01, 0.45, 0.9) 1s;
-  transition: clip 1s cubic-bezier(0.99, 0.01, 0.45, 0.9) 1s; }
+  -webkit-transition: clip 1s cubic-bezier(0.99, 0.01, 0.45, 0.9) 0s;
+  -o-transition: clip 1s cubic-bezier(0.99, 0.01, 0.45, 0.9) 0s;
+  transition: clip 1s cubic-bezier(0.99, 0.01, 0.45, 0.9) 0s; }
 
 .main__head {
   color: #fff;
@@ -78,11 +78,11 @@ main {
   -ms-transform: translateX(0);
   transform: translateX(0);
   opacity: 1;
-  -webkit-transition: opacity 1s ease-out 0s, -webkit-transform 0.8s ease-out 0.2s;
-  transition: opacity 1s ease-out 0s, -webkit-transform 0.8s ease-out 0.2s;
-  -o-transition: transform 0.8s ease-out 0.2s, opacity 1s ease-out 0s;
-  transition: transform 0.8s ease-out 0.2s, opacity 1s ease-out 0s;
-  transition: transform 0.8s ease-out 0.2s, opacity 1s ease-out 0s, -webkit-transform 0.8s ease-out 0.2s; }
+  -webkit-transition: opacity 1s ease-out 0.5s, -webkit-transform 0.8s ease-out 0.7s;
+  transition: opacity 1s ease-out 0.5s, -webkit-transform 0.8s ease-out 0.7s;
+  -o-transition: transform 0.8s ease-out 0.7s, opacity 1s ease-out 0.5s;
+  transition: transform 0.8s ease-out 0.7s, opacity 1s ease-out 0.5s;
+  transition: transform 0.8s ease-out 0.7s, opacity 1s ease-out 0.5s, -webkit-transform 0.8s ease-out 0.7s; }
 
 .playBtn__wrap {
   margin-left: 10%;
@@ -90,11 +90,11 @@ main {
   -ms-transform: translateX(0);
   transform: translateX(0);
   opacity: 1;
-  -webkit-transition: opacity 1s ease-out 0s, -webkit-transform 0.8s ease-out 0.2s;
-  transition: opacity 1s ease-out 0s, -webkit-transform 0.8s ease-out 0.2s;
-  -o-transition: transform 0.8s ease-out 0.2s, opacity 1s ease-out 0s;
-  transition: transform 0.8s ease-out 0.2s, opacity 1s ease-out 0s;
-  transition: transform 0.8s ease-out 0.2s, opacity 1s ease-out 0s, -webkit-transform 0.8s ease-out 0.2s; }
+  -webkit-transition: opacity 1s ease-out 0.5s, -webkit-transform 0.8s ease-out 0.7s;
+  transition: opacity 1s ease-out 0.5s, -webkit-transform 0.8s ease-out 0.7s;
+  -o-transition: transform 0.8s ease-out 0.7s, opacity 1s ease-out 0.5s;
+  transition: transform 0.8s ease-out 0.7s, opacity 1s ease-out 0.5s;
+  transition: transform 0.8s ease-out 0.7s, opacity 1s ease-out 0.5s, -webkit-transform 0.8s ease-out 0.7s; }
 
 .playBtn {
   color: #fff;
@@ -180,9 +180,9 @@ main {
   border-radius: 10%;
   background-color: rgba(169, 169, 169, 0.4);
   visibility: hidden;
-  -webkit-transition: visibility 0s 2s;
-  -o-transition: visibility 0s 2s;
-  transition: visibility 0s 2s; }
+  -webkit-transition: visibility 0s 0s;
+  -o-transition: visibility 0s 0s;
+  transition: visibility 0s 0s; }
   .controlBtn:hover {
     opacity: 1; }
 
@@ -208,16 +208,32 @@ main.play__start .main__head {
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
-  opacity: 0; }
+  opacity: 0;
+  -webkit-transition: opacity 1s ease-out 0s, -webkit-transform 0.8s ease-out 0.2s;
+  transition: opacity 1s ease-out 0s, -webkit-transform 0.8s ease-out 0.2s;
+  -o-transition: transform 0.8s ease-out 0.2s, opacity 1s ease-out 0s;
+  transition: transform 0.8s ease-out 0.2s, opacity 1s ease-out 0s;
+  transition: transform 0.8s ease-out 0.2s, opacity 1s ease-out 0s, -webkit-transform 0.8s ease-out 0.2s; }
 
 main.play__start .playBtn__wrap {
   -webkit-transform: translateX(50%);
   -ms-transform: translateX(50%);
   transform: translateX(50%);
-  opacity: 0; }
+  opacity: 0;
+  -webkit-transition: opacity 1s ease-out 0s, -webkit-transform 0.8s ease-out 0.2s;
+  transition: opacity 1s ease-out 0s, -webkit-transform 0.8s ease-out 0.2s;
+  -o-transition: transform 0.8s ease-out 0.2s, opacity 1s ease-out 0s;
+  transition: transform 0.8s ease-out 0.2s, opacity 1s ease-out 0s;
+  transition: transform 0.8s ease-out 0.2s, opacity 1s ease-out 0s, -webkit-transform 0.8s ease-out 0.2s; }
 
 main.play__start .main__bg {
-  clip: rect(0, 0, 100vh, 0); }
+  clip: rect(0, 0, 100vh, 0);
+  -webkit-transition: clip 1s cubic-bezier(0.99, 0.01, 0.45, 0.9) 1s;
+  -o-transition: clip 1s cubic-bezier(0.99, 0.01, 0.45, 0.9) 1s;
+  transition: clip 1s cubic-bezier(0.99, 0.01, 0.45, 0.9) 1s; }
 
 main.play__start .controlBtn {
-  visibility: visible; }
+  visibility: visible;
+  -webkit-transition: visibility 0s 2s;
+  -o-transition: visibility 0s 2s;
+  transition: visibility 0s 2s; }

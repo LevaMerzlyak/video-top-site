@@ -75,7 +75,7 @@ main {
 	width: 100%;
 	position: absolute;
 	clip: rect(0,100vw,100vh,0);
-	transition: clip 1s cubic-bezier(0.99, 0.01, 0.45, 0.9) 1s;
+	transition: clip 1s cubic-bezier(0.99, 0.01, 0.45, 0.9) 0s;
 }
 .main__head {
 	color: #fff;
@@ -83,13 +83,13 @@ main {
 	margin-top: 20%;
 	transform: translateX(0);
 	opacity: 1;
-	transition: transform 0.8s ease-out 0.2s, opacity 1s ease-out 0s;
+	transition: transform 0.8s ease-out 0.7s, opacity 1s ease-out 0.5s;
 }
 .playBtn__wrap {
 	margin-left: 10%;
 	transform: translateX(0);
 	opacity: 1;
-	transition: transform 0.8s ease-out 0.2s, opacity 1s ease-out 0s;
+	transition: transform 0.8s ease-out 0.7s, opacity 1s ease-out 0.5s;
 }
 .playBtn {
 	color: #fff;
@@ -159,7 +159,7 @@ main {
 	border-radius: 10%;
 	background-color: rgba(169,169,169,0.4);
 	visibility: hidden;
-	transition: visibility 0s 2s;
+	transition: visibility 0s 0s;
 	&:hover {
 		opacity: 1;
 	}
@@ -186,15 +186,19 @@ main.play__start {
 	.main__head {
 		transform: translateX(-50%);
 		opacity: 0;
+		transition: transform 0.8s ease-out 0.2s, opacity 1s ease-out 0s;
 	}
 	.playBtn__wrap {
 		transform: translateX(50%);
 		opacity: 0;
+		transition: transform 0.8s ease-out 0.2s, opacity 1s ease-out 0s;
 	}
 	.main__bg {
 		clip: rect(0,0,100vh,0);
+		transition: clip 1s cubic-bezier(0.99, 0.01, 0.45, 0.9) 1s;
 	}
 	.controlBtn {
 		visibility: visible;
+		transition: visibility 0s 2s;
 	}
 }
