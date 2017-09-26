@@ -5,6 +5,7 @@
 
 	<title>Video top</title>
 	<!-- Styles -->
+	<link rel="stylesheet" type="text/css" href="css/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
@@ -24,23 +25,30 @@
 		</div>
 	</header>
 	<div class="container">
-		<main>
+		<main id="videoPlay">
 			<div class="main__video">
-				<video loop muted autoplay class="bg__video">
+				<video loop class="bg__video" id="video1">
 					<source src="video/SampleVideo.mp4" type="video/mp4">
 				</video>
 			</div>
 			<div class="main__bg">
 				<h1 class="main__head">Инвестиционная компания ИНОР</h1>
 				<div class="playBtn__wrap">
-					<a href="" class="playBtn">
+					<a href="#" class="playBtn">
 						<div class="play__btn"></div>
 						<h3 class="playBtn__txt">Click to play</h3>
 					</a>
 				</div>
 			</div>
-			
+			<div class="controlBtn controlBtn_playPause fa fa-pause"></div>
+			<div class="controlBtn controlBtn_close fa fa-times"></div>
+			<div class="controlBtn controlBtn_volume fa fa-volume-up"></div>
 		</main>
 	</div>
+	<script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+	<script src="js/videoPlay.js" type="text/javascript"></script>
+	<script>
+		var v1 = new VideoStart('#videoPlay');
+	</script>
 </body>
 </html>
