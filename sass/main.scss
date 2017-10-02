@@ -53,7 +53,7 @@ main {
 	margin: 0 auto;
 }
 .main__video {
-	/*display: none;*/
+	display: none;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -87,13 +87,14 @@ main {
 	background-image: url("../images/new-york-city-2.jpg");
 	background-size: cover;
 	background-position: center center;
-	height: 100%;
+	height: 90vh;
 	width: 100%;
 }
 .main__head {
 	color: #fff;
 	margin-left: 10%;
-	margin-top: 20%;
+	margin-top: 0;
+	padding-top: 20%;
 	
 }
 .playBtn__wrap {
