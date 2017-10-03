@@ -14,7 +14,8 @@ $red: #cc2a3a;
 
 
 body {
-  font-family: sans-serif; }
+  font-family: sans-serif; 
+}
 
 header {
   @include boxShadow;
@@ -61,10 +62,9 @@ main {
 	left: 0;
 	width: 100%;
 	height: 100vh;
-	z-index: 1;
-	background-color: rgba(255,255,255,0.8);
-	transition: opacity 1s ease;
+	background-color: rgba(255,255,255,0.8);	
 	z-index: 100;
+	transition: opacity 1s ease-out 0s;
 }
 .video__container {
 	width: 80%;
@@ -74,7 +74,7 @@ main {
 	left: 50%;
 	transform: translate(-50%,-50%);
 	clip: rect(0,0,100vh,0);
-	transition: clip 1s cubic-bezier(0.99, 0.01, 0.45, 0.9) 1s;
+	transition: clip 1s cubic-bezier(0.99, 0.01, 0.45, 0.9) 0s;
 }
 .video__wrap {
 	position: relative;
@@ -88,6 +88,7 @@ main {
 		left: 0;
 		width: 100%;
 		height: 100%;
+		display: none;
 		visibility: hidden;
 		transition: visibility 0s 1s;
 	}
@@ -190,10 +191,14 @@ main.play__start {
 	.main__video {
 		display: block;
 		opacity: 1;
-		transition: opacity 1s ease;
 	}
 	.video__container {
 		clip: rect(0,100vh,100vh,0);
-		transition: clip 1s cubic-bezier(0.99, 0.01, 0.45, 0.9) 1s;
+	}
+	.video__wrap {
+		iframe {
+			display: inline-block;
+			visibility: visible;
+		}
 	}
 }
