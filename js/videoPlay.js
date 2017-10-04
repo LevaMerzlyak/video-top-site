@@ -14,6 +14,9 @@ function VideoStart(sSelector) {
 		
 		event.preventDefault();
 		v.container.addClass(mainClass);
+		setTimeout(function() {
+			v.player.attr("src", "https://www.youtube.com/embed//PE-QOjc1Z5w?autoplay=1")
+		}, 1000);
 
 
 	}
@@ -21,6 +24,7 @@ function VideoStart(sSelector) {
 	v.stopVideo = function() {
 
 		v.container.removeClass(mainClass);
+		v.player.attr("src", "");
 
 	}
 	
